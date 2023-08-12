@@ -1,0 +1,148 @@
+/* Add the background pattern overlay */
+body {
+  background-image: url(/Logos/background.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main {
+  width: 50%;
+  margin: auto;
+}
+
+/* Updated header style */
+header {
+  text-align: center;
+  margin: auto;
+  font-family: sans-serif;
+  color: white;
+  padding: 10px;
+  background-color: #0d1928;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 40%;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+/* Added navigation bar style */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #ffc107; /* Change the color on hover */
+}
+
+/* Improved match elements style */
+.match {
+  padding: 7px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.match:hover {
+  transform: scale(1.03); /* Add scale effect on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+/* Your existing styles for .home, .away, .vs, .team, .team-name, .laliga, .PL, .caltio, img, etc. can remain unchanged. */
+
+.home {
+  width: 40%;
+}
+
+.away {
+  width: 40%;
+}
+
+.vs {
+  width: 20%;
+}
+.vs:hover {
+  color: red; /* Change the color on hover */
+}
+.team,
+.vs,
+.team-name,
+.home,
+.away {
+  display: inline;
+}
+
+.laliga,
+.PL,
+.caltio {
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.team p,
+.vs {
+  display: inline;
+  vertical-align: middle;
+}
+
+img {
+  display: inline;
+  vertical-align: middle;
+  height: 50px;
+}
+
+.away,
+.home {
+  display: flex;
+}
+
+.team {
+  width: 30%;
+}
+
+.team-name {
+  width: 70%;
+  vertical-align: middle;
+  font-family: system-ui;
+}
+
+.PL .match {
+  background-color: rgb(59, 1, 59);
+  color: aliceblue;
+}
+
+.laliga .match {
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+}
+
+.caltio .match {
+  background-color: rgb(255, 255, 255);
+  color: blue;
+}

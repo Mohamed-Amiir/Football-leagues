@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Football Results</title>
+    <meta
+      name="description"
+      content="Football games results in top 5 ranked leagues in Europe"
+    />
+    <link rel="stylesheet" href="footballStyle.css" />
+  </head>
+
+  <body>
+    <script>
+      const vsText = document.getElementsByClassName("vs");
+      let isRed = false;
+
+      function toggleColor() {
+        isRed = !isRed;
+        vsText.style.color = isRed ? "red" : ""; // Toggle color between red and default
+      }
+
+      setInterval(toggleColor, 100); // Toggle color every second
+    </script>
+    <header>
+      <h1>UEFA Cafe</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Leagues</a></li>
+          <li><a href="#">Results</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/mohamed-amiir/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="laliga">
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/laliga.jpg" alt="laliga" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Real Madrid CF</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/real-madrid-logo.png" alt="real madrid" />
+            </div>
+          </div>
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/girona.png" alt="giraona" />
+            </div>
+            <div class="team-name">
+              <p>Girona FC</p>
+            </div>
+          </div>
+        </div>
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/laliga.jpg" alt="laliga" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Athlitec Bilpao</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/bilbao.png" alt="Athlitec Bilpao" />
+            </div>
+          </div>
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/a-madrid.png" alt="a-madrid" />
+            </div>
+            <div class="team-name">
+              <p>Atliteco Madrid</p>
+            </div>
+          </div>
+        </div>
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/laliga.jpg" alt="laliga" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>FC Barcelona</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/barca.png" alt="Berclona" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/celta.png" alt="celta" />
+            </div>
+            <div class="team-name">
+              <p>Celta vigo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/laliga.jpg" alt="laliga" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Valencia</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/valencia-logo.png" alt="valencia" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/via.png" alt="Villreal" />
+            </div>
+            <div class="team-name">
+              <p>Villreal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div class="PL">
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/pl.jpeg" alt="premier league" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Liverpool FC</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/liverpool.png" alt="liverpool" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/arsenal.png" alt="arsenal" />
+            </div>
+            <div class="team-name">
+              <p>Arsenal</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/pl.jpeg" alt="premier league" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>West Ham united</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/west.png" alt="west ham" />
+            </div>
+          </div>
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/mancity.png" alt="mancity" />
+            </div>
+            <div class="team-name">
+              <p>Manchester City</p>
+            </div>
+          </div>
+        </div>
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/pl.jpeg" alt="premier league" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Chelsea</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/chelsea.png" alt="chelsea" />
+            </div>
+          </div>
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/tottenham.png" alt="tottenham" />
+            </div>
+            <div class="team-name">
+              <p>Tottenham Hotspir</p>
+            </div>
+          </div>
+        </div>
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/pl.jpeg" alt="premier league" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Manchester United</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/manunited.png" alt="manunited" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/lester.png" alt="Leicter" />
+            </div>
+            <div class="team-name">
+              <p>Leicter City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="caltio">
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/seriea.jpg" alt="serie a" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Juventus</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/jufe.png" alt="Juventus" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/napoli.png" alt="Napoli" />
+            </div>
+            <div class="team-name">
+              <p>Napoli</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/seriea.jpg" alt="serie a" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>Inter Milan</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/inter.png" alt="inter Milan" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/roma.png" alt="roma" />
+            </div>
+            <div class="team-name">
+              <p>Roma</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="l-logo">
+            <img src="/Logos/seriea.jpg" alt="serie a" />
+          </div>
+          <div class="home">
+            <div class="team-name">
+              <p>AC Milan</p>
+            </div>
+            <div class="team">
+              <img src="/Logos/milan.png" alt="milan" />
+            </div>
+          </div>
+
+          <div class="vs">
+            <p>VS</p>
+          </div>
+          <div class="away">
+            <div class="team">
+              <img src="/Logos/fio.png" alt="fio" />
+            </div>
+            <div class="team-name">
+              <p>Fiorentina</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
