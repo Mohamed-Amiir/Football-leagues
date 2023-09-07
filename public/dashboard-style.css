@@ -1,0 +1,127 @@
+/* dashboard-style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* .match {
+  background-color: #00000a;
+  padding: 7px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.l-logo {
+  width: 10%;
+}
+.away,
+.home {
+  display: inline;
+  display: flex;
+  width: 40%;
+}
+
+.vs {
+  display: inline;
+  width: 10%;
+  color: white;
+}
+.team {
+  display: inline;
+  width: 30%;
+}
+.team p,
+.vs {
+  display: inline;
+  vertical-align: middle;
+}
+.team-name {
+  display: inline;
+  width: 70%;
+  font: message-box;
+  vertical-align: middle;
+  font-family: system-ui;
+  color: rgb(255, 75, 68);
+} */
+
+.match {
+  padding: 7px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #00000a;
+  text-align: center;
+}
+.team,
+.vs,
+.team-name,
+.home,
+.away {
+  display: inline;
+}
+img {
+  display: inline;
+  vertical-align: middle;
+  height: 50px;
+}
+
+.away,
+.home {
+  display: flex;
+  width: 40%;
+}
+
+.team-name {
+  font: message-box;
+  color: rgb(255, 75, 68);
+  width: 70%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.team {
+  width: 30%;
+}
+
+.vs {
+  color: white;
+  width: 20%;
+}
+
+.team p,
+.vs {
+  display: inline;
+  vertical-align: middle;
+}
+
+img {
+  display: inline;
+  vertical-align: middle;
+  height: 50px;
+}
+
+#add-match-form {
+  text-align: center;
+  margin: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

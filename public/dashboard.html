@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Football Match Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css" />
+  </head>
+  <body>
+    <h2>Football Match Results Dashboard</h2>
+
+    <!-- Dashboard container for displaying matches -->
+    <datalist id="recommendations">
+      <option value="Real Betis"></option>
+      <option value="Granada CF"></option>
+      <option value="Girona FC"></option>
+      <option value="Valencia"></option>
+      <option value="Real Madrid CF"></option>
+      <option value="Real Sociedad"></option>
+      <option value="Villarreal"></option>
+      <option value="Atletico Madrid"></option>
+      <option value="FC Barcelona"></option>
+      <option value="Athletic Bilbao"></option>
+      <option value="Celta Viego"></option>
+      <option value="Cadiz"></option>
+      <option value="Osasuna"></option>
+      <option value="Almeria"></option>
+      <option value="Las Palmas"></option>
+      <option value="Deportivo Alavés"></option>
+      <option value="RCD Mallorca"></option>
+      <option value="Rayo Vallecano"></option>
+      <option value="Getafe CF"></option>
+      <option value="Sevilla">
+        <!-- Add more options as needed -->
+      </option>
+    </datalist>
+
+    <!-- Form for adding matches -->
+    <form id="add-match-form">
+      <input
+        type="text"
+        id="team1"
+        placeholder="Team 1"
+        list="recommendations"
+      />
+      <input
+        type="text"
+        id="team2"
+        placeholder="Team 2"
+        list="recommendations"
+      />
+      <br />
+      <button type="submit">Add Match</button>
+    </form>
+
+    <script src="dashboard-script.js"></script>
+  </body>
+</html>

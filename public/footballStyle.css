@@ -6,7 +6,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .main {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -19,8 +19,8 @@ header {
   padding: 10px;
   background-color: #0d1928;
   border: 2px solid #fff;
-  border-radius: 10px;
-  width: 40%;
+  border-radius: 20px;
+  width: 60%;
 }
 
 h1 {
@@ -59,7 +59,7 @@ a:hover {
 
 /* Improved match elements style */
 .match {
-  padding: 7px;
+  padding: 3px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -86,10 +86,15 @@ a:hover {
 .vs {
   width: 20%;
 }
+.laliga .vs {
+  color: white;
+}
 .vs:hover {
   color: red; /* Change the color on hover */
 }
 .team,
+.team-ll,
+.team-pl,
 .vs,
 .team-name,
 .home,
@@ -106,6 +111,8 @@ a:hover {
 }
 
 .team p,
+.team-ll p,
+.team-pl p,
 .vs {
   display: inline;
   vertical-align: middle;
@@ -117,12 +124,20 @@ img {
   height: 50px;
 }
 
+.team-ll img {
+  transform: scale(1.3);
+}
+.team-pl img {
+  transform: scale(0.8);
+}
 .away,
 .home {
   display: flex;
 }
 
-.team {
+.team,
+.team-ll,
+.team-pl {
   width: 30%;
 }
 
@@ -133,15 +148,21 @@ img {
 }
 
 .PL .match {
-  background-color: rgb(59, 1, 59);
+  background: #37003c;
   color: aliceblue;
 }
 
 .laliga .match {
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
+  /* background-color: rgb(255, 75, 68); */
+  background-color: #00000a;
+  /* color: rgb(255, 75, 68); */
 }
-
+.laliga .team-name {
+  color: rgb(255, 75, 68);
+}
+.team-name {
+  font: message-box;
+}
 .caltio .match {
   background-color: rgb(255, 255, 255);
   color: blue;
