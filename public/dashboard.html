@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="dashboard-style.css" />
   </head>
   <body>
-    <h2>LaLiga Match Results Dashboard</h2>
-
     <!-- Dashboard container for displaying matches -->
     <datalist id="recommendations">
       <option value="Real Betis"></option>
@@ -56,7 +54,31 @@
       <option value="Wolverhampton"></option>
       <!-- Add more options as needed -->
     </datalist>
+    <datalist id="sa-recommendations">
+      <option value="Atalanta"></option>
+      <option value="Bologna"></option>
+      <option value="Cagliari"></option>
+      <option value="Empoli"></option>
+      <option value="Fiorentina"></option>
+      <option value="Frosinone"></option>
+      <option value="Genoa"></option>
+      <option value="Hellas Verona"></option>
+      <option value="Inter Milan"></option>
+      <option value="Juventus"></option>
+      <option value="Lazio"></option>
+      <option value="Lecce"></option>
+      <option value="AC Milan"></option>
+      <option value="Monza"></option>
+      <option value="Napoli"></option>
+      <option value="Roma"></option>
+      <option value="Salernitana"></option>
+      <option value="Sassuolo"></option>
+      <option value="Torino"></option>
+      <option value="Udinese"></option>
+      <!-- Add more options as needed -->
+    </datalist>
 
+    <h2>LaLiga Match Dashboard</h2>
     <!-- Form for adding matches -->
     <div class="my-form">
       <form id="add-ll-match">
@@ -82,7 +104,10 @@
     </div>
     <br />
     <div class="laliga" id="laliga"></div>
+
     <br /><br /><br /><br />
+
+    <h2>Premier League Match Dashboard</h2>
     <!-- Form for adding and deleting PL matches -->
     <div class="my-form">
       <form id="add-pl-match">
@@ -108,6 +133,35 @@
     </div>
     <br />
     <div class="pl" id="pl"></div>
+
+    <br /><br /><br /><br />
+
+    <h2>Serie A Match Dashboard</h2>
+    <!-- Form for adding and deleting PL matches -->
+    <div class="my-form">
+      <form id="add-seriea-match">
+        <input
+          type="text"
+          id="sa-team1"
+          placeholder="SA Team 1"
+          list="sa-recommendations"
+        />
+        <input
+          type="text"
+          id="sa-team2"
+          placeholder="SA Team 2"
+          list="sa-recommendations"
+        />
+        <div class="buttons">
+          <button type="submit">Add Match</button>
+          <button type="button" id="delete-sa-match-button">
+            Delete Match
+          </button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="seriea" id="seriea"></div>
 
     <script src="dashboard-script.js"></script>
     <script src="newMatch.js"></script>

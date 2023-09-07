@@ -95,6 +95,7 @@ a:hover {
 .team,
 .team-ll,
 .team-pl,
+.team-sa,
 .vs,
 .team-name,
 .home,
@@ -104,12 +105,12 @@ a:hover {
 
 .laliga,
 .pl,
-.caltio {
+.seriea {
   text-align: center;
   align-items: center;
   margin: auto;
 }
-
+.team-sa p,
 .team p,
 .team-ll p,
 .team-pl p,
@@ -134,7 +135,7 @@ img {
 .home {
   display: flex;
 }
-
+.team-sa,
 .team,
 .team-ll,
 .team-pl {
@@ -162,8 +163,9 @@ img {
 }
 .team-name {
   font: message-box;
+  font: bold;
 }
-.caltio .match {
+.seriea .match {
   background-color: rgb(255, 255, 255);
   color: blue;
 }

@@ -24,6 +24,7 @@ h2 {
   background-color: #00000a;
   text-align: center;
 }
+.team-sa,
 .team,
 .team-pl,
 .vs,
@@ -47,8 +48,13 @@ img {
   background: #37003c;
   color: aliceblue;
 }
+.seriea .match {
+  background-color: rgb(255, 255, 255);
+  color: blue;
+  font: bolder;
+}
 .team-name {
-  font: message-box;
+  font: bolder;
   width: 70%;
   vertical-align: middle;
   text-align: center;
@@ -60,7 +66,7 @@ img {
   vertical-align: middle;
   text-align: center;
 }
-
+.team-sa,
 .team-pl,
 .team {
   width: 30%;
@@ -70,6 +76,10 @@ img {
   color: white;
   width: 20%;
 }
+.seriea .vs {
+  color: blue;
+}
+.team-sa p,
 .team-pl p,
 .team p,
 .vs {
