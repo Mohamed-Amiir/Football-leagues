@@ -6,7 +6,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .main {
-  width: 60%;
+  width: 50%;
   margin: auto;
 }
 
@@ -103,7 +103,7 @@ a:hover {
 }
 
 .laliga,
-.PL,
+.pl,
 .caltio {
   text-align: center;
   align-items: center;
@@ -147,7 +147,7 @@ img {
   font-family: system-ui;
 }
 
-.PL .match {
+.pl .match {
   background: #37003c;
   color: aliceblue;
 }

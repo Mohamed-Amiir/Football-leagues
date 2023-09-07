@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="dashboard-style.css" />
   </head>
   <body>
-    <h2>Football Match Results Dashboard</h2>
+    <h2>LaLiga Match Results Dashboard</h2>
 
     <!-- Dashboard container for displaying matches -->
     <datalist id="recommendations">
@@ -33,25 +33,83 @@
         <!-- Add more options as needed -->
       </option>
     </datalist>
+    <datalist id="pl-recommendations">
+      <option value="Arsenal"></option>
+      <option value="Aston Villa"></option>
+      <option value="Bournemouth"></option>
+      <option value="Brentford"></option>
+      <option value="Brighton"></option>
+      <option value="Burnley"></option>
+      <option value="Chelsea"></option>
+      <option value="Crystal Palace"></option>
+      <option value="Everton"></option>
+      <option value="Fulham"></option>
+      <option value="Liverpool"></option>
+      <option value="Luton Town"></option>
+      <option value="Manchester City"></option>
+      <option value="Manchester United"></option>
+      <option value="Newcastle United"></option>
+      <option value="Nottingham Forest"></option>
+      <option value="Sheffield United"></option>
+      <option value="Tottenham Hotspur"></option>
+      <option value="West Ham United"></option>
+      <option value="Wolverhampton"></option>
+      <!-- Add more options as needed -->
+    </datalist>
 
     <!-- Form for adding matches -->
-    <form id="add-match-form">
-      <input
-        type="text"
-        id="team1"
-        placeholder="Team 1"
-        list="recommendations"
-      />
-      <input
-        type="text"
-        id="team2"
-        placeholder="Team 2"
-        list="recommendations"
-      />
-      <br />
-      <button type="submit">Add Match</button>
-    </form>
+    <div class="my-form">
+      <form id="add-ll-match">
+        <input
+          type="text"
+          id="team1"
+          placeholder="Team 1"
+          list="recommendations"
+        />
+        <input
+          type="text"
+          id="team2"
+          placeholder="Team 2"
+          list="recommendations"
+        />
+        <br />
+        <div class="buttons">
+          <button type="submit">Add Match</button>
+          <button type="button" id="delete-match-button">Delete Match</button>
+        </div>
+        <!-- Add this button -->
+      </form>
+    </div>
+    <br />
+    <div class="laliga" id="laliga"></div>
+    <br /><br /><br /><br />
+    <!-- Form for adding and deleting PL matches -->
+    <div class="my-form">
+      <form id="add-pl-match">
+        <input
+          type="text"
+          id="pl-team1"
+          placeholder="PL Team 1"
+          list="pl-recommendations"
+        />
+        <input
+          type="text"
+          id="pl-team2"
+          placeholder="PL Team 2"
+          list="pl-recommendations"
+        />
+        <div class="buttons">
+          <button type="submit">Add Match</button>
+          <button type="button" id="delete-pl-match-button">
+            Delete Match
+          </button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="pl" id="pl"></div>
 
     <script src="dashboard-script.js"></script>
+    <script src="newMatch.js"></script>
   </body>
 </html>
