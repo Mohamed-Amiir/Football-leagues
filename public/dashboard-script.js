@@ -11,7 +11,7 @@ const deleteMatchButton = document.getElementById("delete-match-button");
 const deletePLMatchButton = document.getElementById("delete-pl-match-button"); // Delete PL match button
 const deleteSAMatchButton = document.getElementById("delete-sa-match-button"); // Delete SA match button
 
-//////////     LALIGA CODE
+/////////////////////////////////////////////////////////////////////     LALIGA CODE      ////////////////////////////////////////////////////////////////////////////////
 
 //Function to add laliga matches to localstorage
 function addllMatchToLocal(team1, team2) {
@@ -81,7 +81,7 @@ deleteMatchButton.addEventListener("click", function () {
   team2Input.value = "";
 });
 
-///////   PREMIER LEAGUE CODE
+/////////////////////////////////////////////////////////////////////   PREMIER LEAGUE CODE   ////////////////////////////////////////////////////////////////////////////
 
 // Function to add a PL match to localStorage
 function addPLMatchToLocal(team1, team2) {
@@ -130,9 +130,7 @@ deletePLMatchButton.addEventListener("click", function () {
   plTeam2Input.value = "";
 });
 
-
-
-///////   SERIE A CODE
+/////////////////////////////////////////////////////////////////////////    SERIE A CODE    ///////////////////////////////////////////////////////////////////////////
 
 // Function to add a SA match to localStorage
 function addSAMatchToLocal(team1, team2) {
