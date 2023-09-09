@@ -5,16 +5,13 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 8001;
 const teamRoute = require("./routes/Team");
 const bodyParser = require("body-parser");
-// const matchRoutes = require("./routes/matchRoutes"); // Import the match router
+const matchRoutes = require("./routes/matchRoutes"); 
 app.use(bodyParser.json());
 // 3rd party middleware
 app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
-
 app.use(express.static(path.join(__dirname, "public"))); // Serve static files from the 'public' folder
-
+app.use("/matchs", matchRoutes);
 app.use("/upload", teamRoute);
-// app.use("/matches", matchRoutes);
-
 // Request main
 app.get("/", (req, res) => {
   res.sendFile(
