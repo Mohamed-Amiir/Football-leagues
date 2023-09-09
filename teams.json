@@ -1,0 +1,84 @@
+{
+  "Laliga": [
+    {
+      "name": "Real Madrid CF",
+      "logo": "/public/Logos/Laliga/Teams/real madrid cf.png"
+    },
+    {
+      "name": "Almeria",
+      "logo": "/public/Logos/Laliga/Teams/almeria.png"
+    },
+    {
+      "name": "Athletic Bilbao",
+      "logo": "/public/Logos/Laliga/Teams/athletic bilbao.png"
+    },
+    {
+      "name": "Atletico Madrid",
+      "logo": "/public/Logos/Laliga/Teams/atletico madrid.png"
+    },
+    {
+      "name": "Cadiz",
+      "logo": "/public/Logos/Laliga/Teams/cadiz.png"
+    },
+    {
+      "name": "Celta Viego",
+      "logo": "/public/Logos/Laliga/Teams/celta viego.png"
+    },
+    {
+      "name": "Deportivo Alavés",
+      "logo": "/public/Logos/Laliga/Teams/deportivo alavés.png"
+    },
+    {
+      "name": "FC Barcelona",
+      "logo": "/public/Logos/Laliga/Teams/fc barcelona.png"
+    },
+    {
+      "name": "Getafe CF",
+      "logo": "/public/Logos/Laliga/Teams/getafe cf.png"
+    },
+    {
+      "name": "Girona FC",
+      "logo": "/public/Logos/Laliga/Teams/girona fc.png"
+    },
+    {
+      "name": "Granada CF",
+      "logo": "/public/Logos/Laliga/Teams/granada cf.png"
+    },
+    {
+      "name": "Las Palmas",
+      "logo": "/public/Logos/Laliga/Teams/las palmas.png"
+    },
+    {
+      "name": "Osasuna",
+      "logo": "/public/Logos/Laliga/Teams/osasuna.png"
+    },
+    {
+      "name": "Rayo Vallecano",
+      "logo": "/public/Logos/Laliga/Teams/rayo vallecano.png"
+    },
+    {
+      "name": "RCD Mallorca",
+      "logo": "/public/Logos/Laliga/Teams/rcd mallorca.png"
+    },
+    {
+      "name": "Real Betis",
+      "logo": "/public/Logos/Laliga/Teams/real betis.png"
+    },
+    {
+      "name": "Real Sociedad",
+      "logo": "/public/Logos/Laliga/Teams/real sociedad.png"
+    },
+    {
+      "name": "Sevilla",
+      "logo": "/public/Logos/Laliga/Teams/sevilla.png"
+    },
+    {
+      "name": "Valencia",
+      "logo": "/public/Logos/Laliga/Teams/valencia.png"
+    },
+    {
+      "name": "Villarreal",
+      "logo": "/public/Logos/Laliga/Teams/villarreal.png"
+    }
+  ]
+}
