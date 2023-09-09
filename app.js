@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 8001;
 const teamRoute = require("./routes/Team");
 const bodyParser = require("body-parser");
-const matchRoutes = require("./routes/matchRoutes"); 
+const matchRoutes = require("./routes/matchRoutes");
 app.use(bodyParser.json());
 // 3rd party middleware
 app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
