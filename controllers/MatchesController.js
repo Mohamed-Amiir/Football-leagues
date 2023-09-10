@@ -6,11 +6,8 @@ const matchsPath = path.join(__dirname, "../matchs.json");
 let getAllMatchs = (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
   // res.json(Student.fetchAllStudents());
-  Student.fetchAllStudents((obj) => {
+  Match.fetchAllStudents((obj) => {
     res.json(obj);
-    // res.render("students.ejs", {
-    //   std: obj,
-    // });
   });
 };
 let insertNewMatch = (req, res) => {
