@@ -10,10 +10,16 @@ app.use(bodyParser.json());
 // 3rd party middleware
 app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
 app.use(express.static(path.join(__dirname, "public"))); // Serve static files from the 'public' folder
-app.use("/matchs", matchRoutes);
 app.use("/upload", teamRoute);
+app.use("/dashboard", matchRoutes);
+
 // Request main
-app.get("/", (req, res) => {
+app.get("/dashboard", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../Football-leagues/public/dashboard.html")
+  );
+});
+app.get("/football", (req, res) => {
   res.sendFile(
     path.join(__dirname, "../Football-leagues/public/football.html")
   );

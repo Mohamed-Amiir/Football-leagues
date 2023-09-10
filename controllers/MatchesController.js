@@ -6,7 +6,7 @@ const matchsPath = path.join(__dirname, "../matchs.json");
 let getAllMatchs = (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
   // res.json(Student.fetchAllStudents());
-  Match.fetchAllStudents((obj) => {
+  Match.fetchAllMatchs((obj) => {
     res.json(obj);
   });
 };

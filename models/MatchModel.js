@@ -34,7 +34,7 @@ module.exports = class Match {
     });
   }
 
-  static fetchAllStudents(callback) {
+  static fetchAllMatchs(callback) {
     fs.readFile(matchsPath, (err, info) => {
       if (!err) {
         callback(JSON.parse(info));
