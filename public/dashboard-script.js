@@ -216,7 +216,7 @@ function createLaLigaMatchElement(team1, team2) {
 
   return matchElement;
 }
-//Function to add laliga matches to localstorage
+
 function fetchMatchs() {
   fetch("/dashboard/fetch")
     .then((response) => response.json())
