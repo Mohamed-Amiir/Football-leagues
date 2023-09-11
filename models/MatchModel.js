@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const teamsPath = path.join(__dirname, "../teams.json"); // Update the path
+const footballPath = path.join(__dirname, "../football.json"); // Update the path
 
 module.exports = class Match {
   constructor(t1, t2) {
@@ -9,18 +9,18 @@ module.exports = class Match {
   }
 
   saveMatch() {
-    fs.readFile(teamsPath, (err, data) => {
+    fs.readFile(footballPath, (err, data) => {
       if (!err) {
-        let jsonData = JSON.parse(data);
+        let football = JSON.parse(data);
 
         // Update the "matchs" array
-        jsonData.matchs.push({
+        football.Laliga.laligaMatchs.push({
           team1: this.team1,
           team2: this.team2,
         });
 
         // Write the updated data back to the file
-        fs.writeFile(teamsPath, JSON.stringify(jsonData), (err) => {
+        fs.writeFile(footballPath, JSON.stringify(football), (err) => {
           if (err) {
             console.log("Error occurred while writing to file:", err);
           } else {
@@ -34,14 +34,14 @@ module.exports = class Match {
   }
 
   static fetchAllMatchs(callback) {
-    fs.readFile(teamsPath, (err, teamsData) => {
+    fs.readFile(footballPath, (err, teamsData) => {
       if (err) {
         return callback(err);
       }
       try {
         const football = JSON.parse(teamsData);
-        const teams = football.teams;
-        const matches = football.matchs;
+        const teams = football.Laliga.laligaTeams;
+        const matches = football.Laliga.laligaMatchs;
 
         // Create an array to store the results
         const matchObjects = [];
