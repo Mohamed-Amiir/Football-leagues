@@ -195,10 +195,10 @@ function createLaLigaMatchElement(team1, team2) {
       </div>
       <div class="home">
           <div class="team-name">
-              <p>${team1}</p>
+              <p>${team1.name}</p>
           </div>
           <div class="team">
-              <img src="/Logos/Laliga/Teams/${team1.toLowerCase()}.png" alt="${team1}" />
+              <img src="${team1.logo}" alt="${team1.name}" />
           </div>
       </div>
       <div class="vs">
@@ -206,10 +206,10 @@ function createLaLigaMatchElement(team1, team2) {
       </div>
       <div class="away">
           <div class="team">
-              <img src="/Logos/Laliga/Teams/${team2.toLowerCase()}.png" alt="${team2}" />
+              <img src="${team2.logo}" alt="${team2.name}" />
           </div>
           <div class="team-name">
-              <p>${team2}</p>
+              <p>${team2.name}</p>
           </div>
       </div>
   `;
@@ -220,10 +220,10 @@ function createLaLigaMatchElement(team1, team2) {
 function fetchMatchs() {
   fetch("/dashboard/fetch")
     .then((response) => response.json())
-    .then((matchs) => {
+    .then((matches) => {
       matchesContainer.innerHTML = "";
-      matchs.forEach((match) => {
-        const mtch = createLaLigaMatchElement(match.team1,match.team2);
+      matches.forEach((match) => {
+        const mtch = createLaLigaMatchElement(match.teamOne, match.teamTwo); // Corrected typo
         matchesContainer.appendChild(mtch);
       });
     })
@@ -256,7 +256,6 @@ addllMatch.addEventListener("submit", function (event) {
   team1Input.value = "";
   team2Input.value = "";
 });
-
 
 deleteMatchButton.addEventListener("click", function () {
   // Get the input values

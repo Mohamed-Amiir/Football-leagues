@@ -5,17 +5,23 @@ const matchsPath = path.join(__dirname, "../matchs.json");
 
 let getAllMatchs = (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
-  // res.json(Student.fetchAllStudents());
-  Match.fetchAllMatchs((obj) => {
-    res.json(obj);
+  Match.fetchAllMatchs((err, result) => {
+    if (err) {
+      // Handle the error, e.g., send an error response
+      console.error("Error fetching match data:", err);
+      res.status(500).send("Internal Server Error");
+    } else {
+      // Send the result (array of match objects) as JSON response
+      res.json(result);
+    }
   });
 };
+
 let insertNewMatch = (req, res) => {
   let mtch = new Match(req.body.team1, req.body.team2);
   mtch.saveMatch();
   res.json(req.body);
 };
-
 let deleteMatch = (req, res) => {
   fs.readFile(matchsPath, (err, data) => {
     if (err) {
