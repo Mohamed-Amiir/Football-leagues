@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const matchsPath = path.join(__dirname, "../matchs.json");
-const teamsPath = path.join(__dirname, "../teams.json");
+const teamsPath = path.join(__dirname, "../teams.json"); // Update the path
 
 module.exports = class Match {
   constructor(t1, t2) {
@@ -10,19 +9,18 @@ module.exports = class Match {
   }
 
   saveMatch() {
-    // 1) read from file
-    fs.readFile(matchsPath, (err, info) => {
+    fs.readFile(teamsPath, (err, data) => {
       if (!err) {
-        let Matchs = JSON.parse(info);
+        let jsonData = JSON.parse(data);
 
-        // 2) update data
-        Matchs.push({
+        // Update the "matchs" array
+        jsonData.matchs.push({
           team1: this.team1,
           team2: this.team2,
         });
 
-        // 3) write into file
-        fs.writeFile(matchsPath, JSON.stringify(Matchs), (err) => {
+        // Write the updated data back to the file
+        fs.writeFile(teamsPath, JSON.stringify(jsonData), (err) => {
           if (err) {
             console.log("Error occurred while writing to file:", err);
           } else {
@@ -40,48 +38,41 @@ module.exports = class Match {
       if (err) {
         return callback(err);
       }
+      try {
+        const football = JSON.parse(teamsData);
+        const teams = football.teams;
+        const matches = football.matchs;
 
-      fs.readFile(matchsPath, (err, matchesData) => {
-        if (err) {
-          console.error("Error occurred while reading file:", err);
-          return callback([]);
-        }
+        // Create an array to store the results
+        const matchObjects = [];
 
-        try {
-          const teams = JSON.parse(teamsData);
-          const matches = JSON.parse(matchesData);
+        matches.forEach((element) => {
+          const teamOneObject = teams.find(
+            (team) => team.name === element.team1
+          );
+          const teamTwoObject = teams.find(
+            (team) => team.name === element.team2
+          );
 
-          // Create an array to store the results
-          const matchObjects = [];
+          if (!teamOneObject || !teamTwoObject) {
+            console.error("One or both teams not found for match:", element);
+            // Skip this match and continue to the next one
+            return;
+          }
 
-          matches.forEach((element) => {
-            const teamOneObject = teams.find(
-              (team) => team.name === element.team1
-            );
-            const teamTwoObject = teams.find(
-              (team) => team.name === element.team2
-            );
+          // Create an object for the match and push it to the result array
+          const matchObject = {
+            teamOne: teamOneObject,
+            teamTwo: teamTwoObject,
+          };
+          matchObjects.push(matchObject);
+        });
 
-            if (!teamOneObject || !teamTwoObject) {
-              console.error("One or both teams not found for match:", element);
-              // Skip this match and continue to the next one
-              return;
-            }
-
-            // Create an object for the match and push it to the result array
-            const matchObject = {
-              teamOne: teamOneObject,
-              teamTwo: teamTwoObject,
-            };
-            matchObjects.push(matchObject);
-          });
-
-          // Return the array of match objects
-          callback(null, matchObjects);
-        } catch (parseError) {
-          callback(parseError);
-        }
-      });
+        // Return the array of match objects
+        callback(null, matchObjects);
+      } catch (parseError) {
+        callback(parseError);
+      }
     });
   }
 };

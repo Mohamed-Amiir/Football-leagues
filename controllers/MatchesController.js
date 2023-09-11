@@ -1,7 +1,7 @@
 const Match = require("../models/MatchModel");
 const fs = require("fs");
 const path = require("path");
-const matchsPath = path.join(__dirname, "../matchs.json");
+const teamsPath = path.join(__dirname, "../teams.json"); // Update the path
 
 let getAllMatchs = (req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
@@ -23,14 +23,14 @@ let insertNewMatch = (req, res) => {
   res.json(req.body);
 };
 let deleteMatch = (req, res) => {
-  fs.readFile(matchsPath, (err, data) => {
+  fs.readFile(teamsPath, (err, data) => {
     if (err) {
       console.error("Error reading matchs.json:", err);
       res.status(500).send("Internal Server Error");
       return;
     }
-
-    let Matchs = JSON.parse(data);
+    const football = JSON.parse(data);
+    let Matchs = football.matchs;
 
     // Find the index of the match with the specified team1
     let idx = Matchs.findIndex((match) => match.team1 === req.params.team1);
@@ -40,7 +40,7 @@ let deleteMatch = (req, res) => {
       Matchs.splice(idx, 1);
 
       // Write the updated data back to the file
-      fs.writeFile(matchsPath, JSON.stringify(Matchs), (writeErr) => {
+      fs.writeFile(teamsPath, JSON.stringify(football), (writeErr) => {
         if (writeErr) {
           console.error("Error writing matchs.json:", writeErr);
           res.status(500).send("Internal Server Error");
