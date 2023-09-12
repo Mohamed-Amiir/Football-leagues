@@ -7,14 +7,14 @@ module.exports = class Match {
     this.team1 = t1;
     this.team2 = t2;
   }
-
-  saveMatch() {
+  
+  saveMatch(league) {
     fs.readFile(footballPath, (err, data) => {
       if (!err) {
         let football = JSON.parse(data);
 
         // Update the "matchs" array
-        football.Laliga.matchs.push({
+        football[league].matchs.push({
           team1: this.team1,
           team2: this.team2,
         });
@@ -33,15 +33,16 @@ module.exports = class Match {
     });
   }
 
-  static fetchAllMatchs(callback) {
+  static fetchAllMatchs(league, callback) {
     fs.readFile(footballPath, (err, teamsData) => {
       if (err) {
         return callback(err);
       }
       try {
         const football = JSON.parse(teamsData);
-        const teams = football.Laliga.teams;
-        const matches = football.Laliga.matchs;
+        const leagueData = football[league];
+        const teams = leagueData.teams;
+        const matches = leagueData.matchs;
 
         // Create an array to store the results
         const matchObjects = [];

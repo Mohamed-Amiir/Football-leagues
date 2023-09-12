@@ -1,1 +1,167 @@
-{"Laliga":{"teams":[{"name":"Real Madrid CF","logo":"/Logos/Laliga/Teams/real madrid cf.png"},{"name":"Almeria","logo":"/Logos/Laliga/Teams/almeria.png"},{"name":"Athletic Bilbao","logo":"/Logos/Laliga/Teams/athletic bilbao.png"},{"name":"Atletico Madrid","logo":"/Logos/Laliga/Teams/atletico madrid.png"},{"name":"Cadiz","logo":"/Logos/Laliga/Teams/cadiz.png"},{"name":"Celta Viego","logo":"/Logos/Laliga/Teams/celta viego.png"},{"name":"Deportivo Alavés","logo":"/Logos/Laliga/Teams/deportivo alavés.png"},{"name":"FC Barcelona","logo":"/Logos/Laliga/Teams/fc barcelona.png"},{"name":"Getafe CF","logo":"/Logos/Laliga/Teams/getafe cf.png"},{"name":"Girona FC","logo":"/Logos/Laliga/Teams/girona fc.png"},{"name":"Granada CF","logo":"/Logos/Laliga/Teams/granada cf.png"},{"name":"Las Palmas","logo":"/Logos/Laliga/Teams/las palmas.png"},{"name":"Osasuna","logo":"/Logos/Laliga/Teams/osasuna.png"},{"name":"Rayo Vallecano","logo":"/Logos/Laliga/Teams/rayo vallecano.png"},{"name":"RCD Mallorca","logo":"/Logos/Laliga/Teams/rcd mallorca.png"},{"name":"Real Betis","logo":"/Logos/Laliga/Teams/real betis.png"},{"name":"Real Sociedad","logo":"/Logos/Laliga/Teams/real sociedad.png"},{"name":"Sevilla","logo":"/Logos/Laliga/Teams/sevilla.png"},{"name":"Valencia","logo":"/Logos/Laliga/Teams/valencia.png"},{"name":"Villarreal","logo":"/Logos/Laliga/Teams/villarreal.png"}],"matchs":[{"team1":"Real Madrid CF","team2":"Real Betis"},{"team1":"Villarreal","team2":"Real Sociedad"},{"team1":"Atletico Madrid","team2":"FC Barcelona"},{"team1":"Valencia","team2":"Getafe CF"}]},"PremierLeague":{"teams":[{"name":"Arsenal","logo":"/Logos/Premier-League/Teams/arsenal.svg"},{"name":"Aston Villa","logo":"/Logos/Premier-League/Teams/aston villa.svg"},{"name":"Bournemouth","logo":"/Logos/Premier-League/Teams/bournemouth.svg"},{"name":"Brentford","logo":"/Logos/Premier-League/Teams/brentford.svg"},{"name":"Brighton","logo":"/Logos/Premier-League/Teams/brighton.svg"},{"name":"Burnley","logo":"/Logos/Premier-League/Teams/burnley.svg"},{"name":"Chelsea","logo":"/Logos/Premier-League/Teams/chelsea.svg"},{"name":"Crystal Palace","logo":"/Logos/Premier-League/Teams/crystal palace.svg"},{"name":"Everton","logo":"/Logos/Premier-League/Teams/everton.svg"},{"name":"Fulham","logo":"/Logos/Premier-League/Teams/fulham.svg"},{"name":"Liverpool","logo":"/Logos/Premier-League/Teams/liverpool.svg"},{"name":"Luton Town","logo":"/Logos/Premier-League/Teams/luton town.svg"},{"name":"Manchester City","logo":"/Logos/Premier-League/Teams/manchester city.svg"},{"name":"Manchester United","logo":"/Logos/Premier-League/Teams/manchester united.svg"},{"name":"Newcastle United","logo":"/Logos/Premier-League/Teams/newcastle united.svg"},{"name":"Nottingham Forest","logo":"/Logos/Premier-League/Teams/nottingham forest.svg"},{"name":"Sheffield United","logo":"/Logos/Premier-League/Teams/sheffield united.svg"},{"name":"Tottenham Hotspur","logo":"/Logos/Premier-League/Teams/tottenham hotspur.svg"},{"name":"West Ham United","logo":"/Logos/Premier-League/Teams/west ham united.svg"},{"name":"Wolverhampton","logo":"/Logos/Premier-League/Teams/wolverhampton.svg"}],"matchs":[]}}
+{
+  "Laliga": {
+    "teams": [
+      {
+        "name": "Real Madrid CF",
+        "logo": "/Logos/Laliga/Teams/real madrid cf.png"
+      },
+      { "name": "Almeria", "logo": "/Logos/Laliga/Teams/almeria.png" },
+      {
+        "name": "Athletic Bilbao",
+        "logo": "/Logos/Laliga/Teams/athletic bilbao.png"
+      },
+      {
+        "name": "Atletico Madrid",
+        "logo": "/Logos/Laliga/Teams/atletico madrid.png"
+      },
+      { "name": "Cadiz", "logo": "/Logos/Laliga/Teams/cadiz.png" },
+      { "name": "Celta Viego", "logo": "/Logos/Laliga/Teams/celta viego.png" },
+      {
+        "name": "Deportivo Alavés",
+        "logo": "/Logos/Laliga/Teams/deportivo alavés.png"
+      },
+      {
+        "name": "FC Barcelona",
+        "logo": "/Logos/Laliga/Teams/fc barcelona.png"
+      },
+      { "name": "Getafe CF", "logo": "/Logos/Laliga/Teams/getafe cf.png" },
+      { "name": "Girona FC", "logo": "/Logos/Laliga/Teams/girona fc.png" },
+      { "name": "Granada CF", "logo": "/Logos/Laliga/Teams/granada cf.png" },
+      { "name": "Las Palmas", "logo": "/Logos/Laliga/Teams/las palmas.png" },
+      { "name": "Osasuna", "logo": "/Logos/Laliga/Teams/osasuna.png" },
+      {
+        "name": "Rayo Vallecano",
+        "logo": "/Logos/Laliga/Teams/rayo vallecano.png"
+      },
+      {
+        "name": "RCD Mallorca",
+        "logo": "/Logos/Laliga/Teams/rcd mallorca.png"
+      },
+      { "name": "Real Betis", "logo": "/Logos/Laliga/Teams/real betis.png" },
+      {
+        "name": "Real Sociedad",
+        "logo": "/Logos/Laliga/Teams/real sociedad.png"
+      },
+      { "name": "Sevilla", "logo": "/Logos/Laliga/Teams/sevilla.png" },
+      { "name": "Valencia", "logo": "/Logos/Laliga/Teams/valencia.png" },
+      { "name": "Villarreal", "logo": "/Logos/Laliga/Teams/villarreal.png" }
+    ],
+    "matchs": [
+      { "team1": "Real Madrid CF", "team2": "Real Betis" },
+      { "team1": "Villarreal", "team2": "Real Sociedad" },
+      { "team1": "Atletico Madrid", "team2": "FC Barcelona" },
+      { "team1": "Valencia", "team2": "Getafe CF" },
+      { "team1": "Athletic Bilbao", "team2": "Sevilla" }
+    ]
+  },
+  "PremierLeague": {
+    "teams": [
+      { "name": "Arsenal", "logo": "/Logos/Premier-League/Teams/arsenal.svg" },
+      {
+        "name": "Aston Villa",
+        "logo": "/Logos/Premier-League/Teams/aston villa.svg"
+      },
+      {
+        "name": "Bournemouth",
+        "logo": "/Logos/Premier-League/Teams/bournemouth.svg"
+      },
+      {
+        "name": "Brentford",
+        "logo": "/Logos/Premier-League/Teams/brentford.svg"
+      },
+      {
+        "name": "Brighton",
+        "logo": "/Logos/Premier-League/Teams/brighton.svg"
+      },
+      { "name": "Burnley", "logo": "/Logos/Premier-League/Teams/burnley.svg" },
+      { "name": "Chelsea", "logo": "/Logos/Premier-League/Teams/chelsea.svg" },
+      {
+        "name": "Crystal Palace",
+        "logo": "/Logos/Premier-League/Teams/crystal palace.svg"
+      },
+      { "name": "Everton", "logo": "/Logos/Premier-League/Teams/everton.svg" },
+      { "name": "Fulham", "logo": "/Logos/Premier-League/Teams/fulham.svg" },
+      {
+        "name": "Liverpool",
+        "logo": "/Logos/Premier-League/Teams/liverpool.svg"
+      },
+      {
+        "name": "Luton Town",
+        "logo": "/Logos/Premier-League/Teams/luton town.svg"
+      },
+      {
+        "name": "Manchester City",
+        "logo": "/Logos/Premier-League/Teams/manchester city.svg"
+      },
+      {
+        "name": "Manchester United",
+        "logo": "/Logos/Premier-League/Teams/manchester united.svg"
+      },
+      {
+        "name": "Newcastle United",
+        "logo": "/Logos/Premier-League/Teams/newcastle united.svg"
+      },
+      {
+        "name": "Nottingham Forest",
+        "logo": "/Logos/Premier-League/Teams/nottingham forest.svg"
+      },
+      {
+        "name": "Sheffield United",
+        "logo": "/Logos/Premier-League/Teams/sheffield united.svg"
+      },
+      {
+        "name": "Tottenham Hotspur",
+        "logo": "/Logos/Premier-League/Teams/tottenham hotspur.svg"
+      },
+      {
+        "name": "West Ham United",
+        "logo": "/Logos/Premier-League/Teams/west ham united.svg"
+      },
+      {
+        "name": "Wolverhampton",
+        "logo": "/Logos/Premier-League/Teams/wolverhampton.svg"
+      }
+    ],
+    "matchs": [
+      { "team1": "Arsenal", "team2": "Liverpool" },
+      { "team1": "Tottenham Hotspur", "team2": "Newcastle United" },
+      { "team1": "Everton", "team2": "Manchester City" },
+      { "team1": "Burnley", "team2": "Chelsea" },
+      { "team1": "West Ham United", "team2": "Wolverhampton" }
+    ]
+  },
+  "SireaA": {
+    "teams": [
+      { "name": "AC Milan", "logo": "/Logos/SireaA/Teams/ac milan.webp" },
+      { "name": "Atalanta", "logo": "/Logos/SireaA/Teams/atalanta.webp" },
+      { "name": "Bologna", "logo": "/Logos/SireaA/Teams/bologna.webp" },
+      { "name": "Cagliari", "logo": "/Logos/SireaA/Teams/cagliari.webp" },
+      { "name": "Empoli", "logo": "/Logos/SireaA/Teams/empoli.webp" },
+      { "name": "Fiorentina", "logo": "/Logos/SireaA/Teams/fiorentina.webp" },
+      { "name": "Frosinone", "logo": "/Logos/SireaA/Teams/frosinone.webp" },
+      { "name": "Genoa", "logo": "/Logos/SireaA/Teams/genoa.webp" },
+      {
+        "name": "Hellas Verona",
+        "logo": "/Logos/SireaA/Teams/hellas verona.webp"
+      },
+      { "name": "Inter Milan", "logo": "/Logos/SireaA/Teams/inter milan.webp" },
+      { "name": "Juventus", "logo": "/Logos/SireaA/Teams/juventus.webp" },
+      { "name": "Lazio", "logo": "/Logos/SireaA/Teams/lazio.webp" },
+      { "name": "Lecce", "logo": "/Logos/SireaA/Teams/lecce.webp" },
+      { "name": "Monza", "logo": "/Logos/SireaA/Teams/monza.webp" },
+      { "name": "Napoli", "logo": "/Logos/SireaA/Teams/napoli.webp" },
+      { "name": "Roma", "logo": "/Logos/SireaA/Teams/roma.webp" },
+      { "name": "Salernitana", "logo": "/Logos/SireaA/Teams/salernitana.webp" },
+      { "name": "Sassuolo", "logo": "/Logos/SireaA/Teams/sassuolo.webp" },
+      { "name": "Torino", "logo": "/Logos/SireaA/Teams/torino.webp" },
+      { "name": "Udinese", "logo": "/Logos/SireaA/Teams/udinese.webp" }
+    ],
+    "matchs": [
+      { "team1": "Genoa", "team2": "Empoli" },
+      { "team1": "Salernitana", "team2": "Monza" },
+      { "team1": "AC Milan", "team2": "Frosinone" },
+      { "team1": "Sassuolo", "team2": "Atalanta" },
+      { "team1": "Juventus", "team2": "Torino" }
+    ]
+  }
+}
