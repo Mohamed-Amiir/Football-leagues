@@ -14,7 +14,7 @@ module.exports = class Match {
         let football = JSON.parse(data);
 
         // Update the "matchs" array
-        football.Laliga.laligaMatchs.push({
+        football.Laliga.matchs.push({
           team1: this.team1,
           team2: this.team2,
         });
@@ -40,8 +40,8 @@ module.exports = class Match {
       }
       try {
         const football = JSON.parse(teamsData);
-        const teams = football.Laliga.laligaTeams;
-        const matches = football.Laliga.laligaMatchs;
+        const teams = football.Laliga.teams;
+        const matches = football.Laliga.matchs;
 
         // Create an array to store the results
         const matchObjects = [];

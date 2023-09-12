@@ -22,6 +22,7 @@ let insertNewMatch = (req, res) => {
   mtch.saveMatch();
   res.json(req.body);
 };
+
 let deleteMatch = (req, res) => {
   fs.readFile(footballPath, (err, data) => {
     if (err) {
@@ -30,7 +31,7 @@ let deleteMatch = (req, res) => {
       return;
     }
     const football = JSON.parse(data);
-    let Matchs = football.Laliga.laligaMatchs;
+    let Matchs = football.Laliga.matchs;
 
     // Find the index of the match with the specified team1
     let idx = Matchs.findIndex((match) => match.team1 === req.params.team1);
