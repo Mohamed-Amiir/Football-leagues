@@ -14,7 +14,7 @@ app.use("/dashboard", matchRoutes);
 app.get("/dashboard", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/Dashboard/dashboard.html"));
 });
-app.get("/", (req, res) => {
+app.get("/Main-Page", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/Main-Page/football.html"));
 });
 
