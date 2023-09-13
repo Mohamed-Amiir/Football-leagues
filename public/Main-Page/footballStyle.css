@@ -1,6 +1,6 @@
 /* Add the background pattern overlay */
 body {
-  background-image: url(/Logos/background.jpg);
+  background-image: url(../Logos/background.jpg);
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.5);
