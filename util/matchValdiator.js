@@ -1,19 +1,8 @@
-const Ajv = require("ajv");
-const ajv = new Ajv();
+const Joi = require("joi");
 
-const schema = {
-  type: "object",
-  properties: {
-    team1: {
-      type: "string",
-    },
-    team2: {
-      type: "string",
-    },
-  },
-  required: ["team1", "team2"],
-};
+const schema = Joi.object({
+  team1: Joi.string().required(),
+  team2: Joi.string().required(),
+});
 
-const validate = ajv.compile(schema);
-
-module.exports = validate;
+module.exports = schema;

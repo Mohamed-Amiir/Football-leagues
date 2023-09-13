@@ -1,7 +1,6 @@
 const validator = require("../util/matchValdiator");
-
 module.exports = (req, res, next) => {
-  let valid = validator(req.body);
+  let valid = validator.validate(req.body);
   if (valid) {
     req.valid = 1;
     next();
