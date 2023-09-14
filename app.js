@@ -12,10 +12,10 @@ app.use("/dashboard", matchRoutes);
 
 // Request main
 app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/Dashboard/dashboard.html"));
+  res.sendFile(path.join(__dirname, "./public/dashboard/dashboard.html"));
 });
-app.get("/Main-Page", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/Main-Page/football.html"));
+app.get("/main", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/main/main.html"));
 });
 
 app.listen(port, () => {
