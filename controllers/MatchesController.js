@@ -27,7 +27,7 @@ let insertNewMatch = (req, res) => {
 
 let deleteMatch = (req, res) => {
   const league = req.params.league;
-  const team1 = req.params.team1;
+  const team1 = req.body.team1;
   fs.readFile(footballPath, (err, data) => {
     if (err) {
       console.error("Error reading matchs.json:", err);

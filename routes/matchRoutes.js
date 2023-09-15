@@ -5,6 +5,6 @@ const validate = require("../middlewares/MatchValidatorMW");
 
 router.get("/fetch/:league", MatchController.getAllMatchs);
 router.post("/:league", validate, MatchController.insertNewMatch);
-router.delete("/:league/:team1", MatchController.deleteMatch);
+router.delete("/:league", MatchController.deleteMatch);
 
 module.exports = router;

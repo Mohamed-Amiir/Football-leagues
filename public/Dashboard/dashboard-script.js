@@ -95,12 +95,15 @@ deleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1Input.value;
 
-  fetch(`/dashboard/Laliga/${team1}`, {
+  fetch("/dashboard/Laliga", {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ team1 }),
   })
-    .then((response) => response.json())
     .then(() => {
-      fetchMatchs("Laliga"); // Refresh the list of students
+      fetchMatchs(); // Refresh the list of students
       addllMatch.reset();
     })
     .catch((error) => console.error(error));
@@ -189,12 +192,15 @@ plDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1PLInput.value;
 
-  fetch(`/dashboard/PremierLeague/${team1}`, {
+  fetch(`/dashboard/PremierLeague`, {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ team1 }),
   })
-    .then((response) => response.json())
     .then(() => {
-      fetchMatchs("PremierLeague"); // Refresh the list of students
+      fetchPLMatchs(); // Refresh the list of students
       addplMatch.reset();
     })
     .catch((error) => console.error(error));
@@ -280,12 +286,15 @@ saDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1SAInput.value;
 
-  fetch(`/dashboard/SireaA/${team1}`, {
+  fetch(`/dashboard/SireaA`, {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ team1 }),
   })
-    .then((response) => response.json())
     .then(() => {
-      fetchMatchs("SireaA"); // Refresh the list of students
+      fetchSAMatchs(); // Refresh the list of students
       addsaMatch.reset();
     })
     .catch((error) => console.error(error));
