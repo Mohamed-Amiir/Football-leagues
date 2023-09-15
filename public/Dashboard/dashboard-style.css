@@ -1,18 +1,54 @@
 /* dashboard-style.css */
+/* dashboard-style.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; /* Change the background color for the page */
 }
+
 .buttons,
 .my-form {
   display: flex;
   margin: auto;
   justify-content: center; /* Center horizontally */
+  background-color: #ffffff; /* Change the background color for the forms */
+  border-radius: 10px; /* Add rounded corners to the forms */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  width: 50%;
 }
 
 h2 {
   text-align: center;
+  color: #333; /* Change the text color for h2 headings */
 }
+
+/* Style for input fields in the forms */
+input[type="text"] {
+  padding: 10px; /* Increase padding for better appearance */
+  margin: 10px; /* Increase margin for better spacing */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for buttons in the forms */
+button {
+  padding: 10px 20px; /* Increase padding for better appearance */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Your existing styling for .laliga, .pl, .seriea, and their child containers remains unchanged */
 
 .match {
   padding: 7px;
@@ -91,22 +127,4 @@ img {
   display: inline;
   vertical-align: middle;
   height: 50px;
-}
-
-#add-match-form {
-  text-align: center;
-  margin: 20px;
-}
-
-input[type="text"] {
-  padding: 5px;
-  margin: 5px;
-}
-
-button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
 }
