@@ -2,7 +2,8 @@
 
 Welcome to the Football Results Website, your go-to source for match results from La Liga, Premier League, and Serie A. This website also features an authentication-based admin dashboard that allows administrators to add or delete match information.
 
-![Website Screenshot](screenshot.png)
+![Website Screenshot](main.jpeg)
+![Dashboard Screenshot](dashboard.jpeg)
 
 ## Table of Contents
 
@@ -37,7 +38,6 @@ The Football Results Website is designed to provide football enthusiasts with re
    - **Dashboard**: Log in as an admin to manage match information.
 
 3. Explore match fixtures and details by selecting a league. Hover over match cards for additional information.
-
 
 ## Admin Dashboard
 
