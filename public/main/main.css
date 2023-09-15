@@ -126,11 +126,11 @@ img {
 }
 
 .team-ll img {
-  transform: scale(1.3);
+  transform: scale(1.15);
 }
 .team-pl img,
 .team-sa img {
-  transform: scale(0.85);
+  transform: scale(0.86);
 }
 .away,
 .home {

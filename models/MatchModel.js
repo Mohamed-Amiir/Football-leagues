@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const footballPath = path.join(__dirname, "../football.json"); // Update the path
+const footballPath = path.join(__dirname, "../data/football.json"); // Update the path
 
 module.exports = class Match {
   constructor(t1, t2) {

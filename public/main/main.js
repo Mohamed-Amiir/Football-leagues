@@ -16,7 +16,7 @@ function createLaLigaMatchElement(team1, team2) {
             <div class="team-name">
                 <p>${team1.name}</p>
             </div>
-            <div class="team">
+            <div class="team-ll">
                 <img src="${team1.logo}" alt="${team1.name}" />
             </div>
         </div>
@@ -24,7 +24,7 @@ function createLaLigaMatchElement(team1, team2) {
             <p>VS</p>
         </div>
         <div class="away">
-            <div class="team">
+            <div class="team-ll">
                 <img src="${team2.logo}" alt="${team2.name}" />
             </div>
             <div class="team-name">
@@ -63,7 +63,7 @@ function createPremierLeagueMatchElement(team1, team2) {
           <div class="team-name">
               <p>${team1.name}</p>
           </div>
-          <div class="team">
+          <div class="team-pl">
               <img src="${team1.logo}" alt="${team1.name}" />
           </div>
       </div>
@@ -71,7 +71,7 @@ function createPremierLeagueMatchElement(team1, team2) {
           <p>VS</p>
       </div>
       <div class="away">
-          <div class="team">
+          <div class="team-pl">
               <img src="${team2.logo}" alt="${team2.name}" />
           </div>
           <div class="team-name">
@@ -113,7 +113,7 @@ function createSireaAMatchElement(team1, team2) {
           <div class="team-name">
               <p>${team1.name}</p>
           </div>
-          <div class="team">
+          <div class="team-sa">
               <img src="${team1.logo}" alt="${team1.name}" />
           </div>
       </div>
@@ -121,7 +121,7 @@ function createSireaAMatchElement(team1, team2) {
           <p>VS</p>
       </div>
       <div class="away">
-          <div class="team">
+          <div class="team-sa">
               <img src="${team2.logo}" alt="${team2.name}" />
           </div>
           <div class="team-name">

@@ -1,7 +1,7 @@
 const Match = require("../models/MatchModel");
 const fs = require("fs");
 const path = require("path");
-const footballPath = path.join(__dirname, "../football.json"); // Update the path
+const footballPath = path.join(__dirname, "../data/football.json"); // Update the path
 
 let getAllMatchs = (req, res) => {
   const LEAGUE = req.params.league;

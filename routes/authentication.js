@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const path = require("path");
-const usersPath = path.join(__dirname, "../users.json");
+const usersPath = path.join(__dirname, "../data/users.json");
 
 router.post("/admin", (req, res) => {
   // Read the content of the JSON file
