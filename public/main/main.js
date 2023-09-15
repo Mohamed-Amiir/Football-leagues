@@ -1,7 +1,9 @@
 const matchesContainer = document.getElementById("laliga"); // Laliga Matchs Container
 const plMatchesContainer = document.getElementById("pl"); // Premier League Matchs Container
 const saMatchesContainer = document.getElementById("seriea"); // Sirea A Matchs Container
-
+const laligaButton = document.getElementById("laliga-button");
+const plButton = document.getElementById("pl-button");
+const saButton = document.getElementById("sa-button");
 //////////////////////////////////////      LALIGA       //////////////////////////////////////
 
 function createLaLigaMatchElement(team1, team2) {
@@ -48,6 +50,18 @@ function fetchMatchs() {
     .catch((error) => console.error(error));
 }
 fetchMatchs();
+laligaButton.addEventListener("click", function () {
+  // Check if the container is currently visible
+  if (matchesContainer.style.display == "none") {
+    // Show the container
+    matchesContainer.style.display = "block";
+    laligaButton.style.backgroundColor = "green";
+  } else {
+    // Hide the container
+    matchesContainer.style.display = "none";
+    laligaButton.style.backgroundColor = "red";
+  }
+});
 
 //////////////////////////////////////      PREMIER LEAGUE       //////////////////////////////////////
 
@@ -98,7 +112,18 @@ function fetchPLMatchs() {
     .catch((error) => console.error(error));
 }
 fetchPLMatchs();
-
+plButton.addEventListener("click", function () {
+  // Check if the container is currently visible
+  if (plMatchesContainer.style.display == "none") {
+    // Show the container
+    plMatchesContainer.style.display = "block";
+    plButton.style.backgroundColor = "green";
+  } else {
+    // Hide the container
+    plMatchesContainer.style.display = "none";
+    plButton.style.backgroundColor = "red";
+  }
+});
 //////////////////////////////////////      SIREA A       //////////////////////////////////////
 
 function createSireaAMatchElement(team1, team2) {
@@ -145,3 +170,15 @@ function fetchSAMatchs() {
     .catch((error) => console.error(error));
 }
 fetchSAMatchs();
+saButton.addEventListener("click", function () {
+  // Check if the container is currently visible
+  if (saMatchesContainer.style.display == "none") {
+    // Show the container
+    saMatchesContainer.style.display = "block";
+    saButton.style.backgroundColor = "green";
+  } else {
+    // Hide the container
+    saMatchesContainer.style.display = "none";
+    saButton.style.backgroundColor = "red";
+  }
+});

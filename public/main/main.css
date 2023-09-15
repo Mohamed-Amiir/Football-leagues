@@ -56,6 +56,30 @@ a {
 a:hover {
   color: #ffc107; /* Change the color on hover */
 }
+/* Style the league list */
+.league-list {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style: none;
+}
+
+/* Show the league list when hovering over the "Leagues" menu item */
+li:hover .league-list {
+  display: block;
+}
+/* Optional CSS for styling the button */
+.laliga-button,
+.pl-button,
+.sa-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
 /* Improved match elements style */
 .match {
@@ -66,6 +90,7 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
 }
 
 .match:hover {
