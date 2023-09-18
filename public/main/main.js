@@ -38,12 +38,12 @@ function createLaLigaMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchMatchs() {
-  fetch("/dashboard/fetch/Spain")
+  fetch("/dashboard/fetch/LaLiga")
     .then((response) => response.json())
     .then((matches) => {
       matchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createLaLigaMatchElement(match.teamOne, match.teamTwo); // Corrected typo
+        const mtch = createLaLigaMatchElement(match.team1, match.team2); // Corrected typo
         matchesContainer.appendChild(mtch);
       });
     })
@@ -97,15 +97,12 @@ function createPremierLeagueMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchPLMatchs() {
-  fetch("/dashboard/fetch/England")
+  fetch("/dashboard/fetch/Premier-League")
     .then((response) => response.json())
     .then((matches) => {
       plMatchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createPremierLeagueMatchElement(
-          match.teamOne,
-          match.teamTwo
-        ); // Corrected typo
+        const mtch = createPremierLeagueMatchElement(match.team1, match.team2); // Corrected typo
         plMatchesContainer.appendChild(mtch);
       });
     })
@@ -158,12 +155,12 @@ function createSireaAMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchSAMatchs() {
-  fetch("/dashboard/fetch/Italy")
+  fetch("/dashboard/fetch/SerieA")
     .then((response) => response.json())
     .then((matches) => {
       saMatchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createSireaAMatchElement(match.teamOne, match.teamTwo); // Corrected typo
+        const mtch = createSireaAMatchElement(match.team1, match.team2); // Corrected typo
         saMatchesContainer.appendChild(mtch);
       });
     })
