@@ -32,10 +32,10 @@ function createLaLigaMatchElement(team1, team2) {
       </div>
       <div class="home">
           <div class="team-name">
-              <p>${team1.name}</p>
+              <p>${team1}</p>
           </div>
           <div class="team-ll">
-              <img src="${team1.logo}" alt="${team1.name}" />
+              <img src="${team1}" alt="${team1}" />
           </div>
       </div>
       <div class="vs">
@@ -43,10 +43,10 @@ function createLaLigaMatchElement(team1, team2) {
       </div>
       <div class="away">
           <div class="team-ll">
-              <img src="${team2.logo}" alt="${team2.name}" />
+              <img src="${team2}" alt="${team2}" />
           </div>
           <div class="team-name">
-              <p>${team2.name}</p>
+              <p>${team2}</p>
           </div>
       </div>
   `;
@@ -54,7 +54,7 @@ function createLaLigaMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchMatchs() {
-  fetch("/dashboard/fetch/Laliga")
+  fetch("/dashboard/fetch/LaLiga")
     .then((response) => response.json())
     .then((matches) => {
       matchesContainer.innerHTML = "";
@@ -73,7 +73,7 @@ addllMatch.addEventListener("submit", function (event) {
   const team1 = team1Input.value;
   const team2 = team2Input.value;
 
-  fetch("/dashboard/Laliga", {
+  fetch("/dashboard/LaLiga", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -95,7 +95,7 @@ deleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1Input.value;
 
-  fetch("/dashboard/Laliga", {
+  fetch("/dashboard/LaLiga", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -148,7 +148,7 @@ function createPremierLeagueMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchPLMatchs() {
-  fetch("/dashboard/fetch/PremierLeague")
+  fetch("/dashboard/fetch/England")
     .then((response) => response.json())
     .then((matches) => {
       plMatchesContainer.innerHTML = "";
@@ -170,7 +170,7 @@ addplMatch.addEventListener("submit", function (event) {
   const team1 = team1PLInput.value;
   const team2 = team2PLInput.value;
 
-  fetch("/dashboard/PremierLeague", {
+  fetch("/dashboard/England", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -192,7 +192,7 @@ plDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1PLInput.value;
 
-  fetch(`/dashboard/PremierLeague`, {
+  fetch(`/dashboard/England`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -245,7 +245,7 @@ function createSireaAMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchSAMatchs() {
-  fetch("/dashboard/fetch/SireaA")
+  fetch("/dashboard/fetch/Italy")
     .then((response) => response.json())
     .then((matches) => {
       saMatchesContainer.innerHTML = "";
@@ -264,7 +264,7 @@ addsaMatch.addEventListener("submit", function (event) {
   const team1 = team1SAInput.value;
   const team2 = team2SAInput.value;
 
-  fetch("/dashboard/SireaA", {
+  fetch("/dashboard/Italy", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -286,7 +286,7 @@ saDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1SAInput.value;
 
-  fetch(`/dashboard/SireaA`, {
+  fetch(`/dashboard/Italy`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

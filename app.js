@@ -4,6 +4,18 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 3333;
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+mongoose
+  .connect("mongodb://localhost:27017/football", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Database Connected...");
+  })
+  .catch((err) => {
+    console.error("Error connecting to database:", err);
+  });
 app.use(
   session({
     secret: "your_secret_key", // Change this to a secret key for session management
@@ -12,12 +24,13 @@ app.use(
   })
 );
 const matchRoutes = require("./routes/matchRoutes");
+const Football = require("./routes/Match");
 const loginRoutes = require("./routes/authentication");
 app.use(bodyParser.json());
 // 3rd party middleware
 app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/dashboard", matchRoutes);
+app.use("/dashboard", Football);
 app.use("/login", loginRoutes);
 
 function isAuthenticated(req, res, next) {
@@ -28,6 +41,7 @@ function isAuthenticated(req, res, next) {
   // If not authenticated, redirect to the login page
   res.redirect("/login");
 }
+
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/login/login.html"));
 });

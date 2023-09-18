@@ -38,7 +38,7 @@ function createLaLigaMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchMatchs() {
-  fetch("/dashboard/fetch/Laliga")
+  fetch("/dashboard/fetch/Spain")
     .then((response) => response.json())
     .then((matches) => {
       matchesContainer.innerHTML = "";
@@ -63,7 +63,7 @@ laligaButton.addEventListener("click", function () {
   }
 });
 
-//////////////////////////////////////      PREMIER LEAGUE       //////////////////////////////////////
+////////////////////////////////      PREMIER LEAGUE       ////////////////////////////////////
 
 function createPremierLeagueMatchElement(team1, team2) {
   const matchElement = document.createElement("div");
@@ -97,7 +97,7 @@ function createPremierLeagueMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchPLMatchs() {
-  fetch("/dashboard/fetch/PremierLeague")
+  fetch("/dashboard/fetch/England")
     .then((response) => response.json())
     .then((matches) => {
       plMatchesContainer.innerHTML = "";
@@ -158,7 +158,7 @@ function createSireaAMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchSAMatchs() {
-  fetch("/dashboard/fetch/SireaA")
+  fetch("/dashboard/fetch/Italy")
     .then((response) => response.json())
     .then((matches) => {
       saMatchesContainer.innerHTML = "";
