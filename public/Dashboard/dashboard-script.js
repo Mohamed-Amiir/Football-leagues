@@ -32,21 +32,21 @@ function createLaLigaMatchElement(team1, team2) {
       </div>
       <div class="home">
           <div class="team-name">
-              <p>${team1}</p>
+              <p>${team1.name}</p>
           </div>
-          <div class="team-ll">
-              <img src="${team1}" alt="${team1}" />
+          <div class="team">
+              <img src="${team1.logo}" alt="${team1.name}" />
           </div>
       </div>
       <div class="vs">
           <p>VS</p>
       </div>
       <div class="away">
-          <div class="team-ll">
-              <img src="${team2}" alt="${team2}" />
+          <div class="team">
+              <img src="${team2.logo}" alt="${team2.name}" />
           </div>
           <div class="team-name">
-              <p>${team2}</p>
+              <p>${team2.name}</p>
           </div>
       </div>
   `;
@@ -59,7 +59,7 @@ function fetchMatchs() {
     .then((matches) => {
       matchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createLaLigaMatchElement(match.teamOne, match.teamTwo); // Corrected typo
+        const mtch = createLaLigaMatchElement(match.team1, match.team2); // Corrected typo
         matchesContainer.appendChild(mtch);
       });
     })
@@ -80,7 +80,6 @@ addllMatch.addEventListener("submit", function (event) {
     },
     body: JSON.stringify({ team1, team2 }),
   })
-    .then((response) => response.json())
     .then(() => {
       fetchMatchs(); // Refresh the list of students
       addllMatch.reset();
@@ -148,15 +147,12 @@ function createPremierLeagueMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchPLMatchs() {
-  fetch("/dashboard/fetch/England")
+  fetch("/dashboard/fetch/Premier-League")
     .then((response) => response.json())
     .then((matches) => {
       plMatchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createPremierLeagueMatchElement(
-          match.teamOne,
-          match.teamTwo
-        ); // Corrected typo
+        const mtch = createPremierLeagueMatchElement(match.team1, match.team2); // Corrected typo
         plMatchesContainer.appendChild(mtch);
       });
     })
@@ -170,14 +166,13 @@ addplMatch.addEventListener("submit", function (event) {
   const team1 = team1PLInput.value;
   const team2 = team2PLInput.value;
 
-  fetch("/dashboard/England", {
+  fetch("/dashboard/Premier-League", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ team1, team2 }),
   })
-    .then((response) => response.json())
     .then(() => {
       fetchPLMatchs(); // Refresh the list of students
       addplMatch.reset();
@@ -192,7 +187,7 @@ plDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1PLInput.value;
 
-  fetch(`/dashboard/England`, {
+  fetch(`/dashboard/Premier-League`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -245,12 +240,12 @@ function createSireaAMatchElement(team1, team2) {
   return matchElement;
 }
 function fetchSAMatchs() {
-  fetch("/dashboard/fetch/Italy")
+  fetch("/dashboard/fetch/SerieA")
     .then((response) => response.json())
     .then((matches) => {
       saMatchesContainer.innerHTML = "";
       matches.forEach((match) => {
-        const mtch = createSireaAMatchElement(match.teamOne, match.teamTwo); // Corrected typo
+        const mtch = createSireaAMatchElement(match.team1, match.team2); // Corrected typo
         saMatchesContainer.appendChild(mtch);
       });
     })
@@ -264,14 +259,13 @@ addsaMatch.addEventListener("submit", function (event) {
   const team1 = team1SAInput.value;
   const team2 = team2SAInput.value;
 
-  fetch("/dashboard/Italy", {
+  fetch("/dashboard/SerieA", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ team1, team2 }),
   })
-    .then((response) => response.json())
     .then(() => {
       fetchSAMatchs(); // Refresh the list of students
       addsaMatch.reset();
@@ -286,7 +280,7 @@ saDeleteMatchButton.addEventListener("click", function () {
   // Get the input values
   const team1 = team1SAInput.value;
 
-  fetch(`/dashboard/Italy`, {
+  fetch(`/dashboard/SerieA`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

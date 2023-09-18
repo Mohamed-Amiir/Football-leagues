@@ -9,14 +9,14 @@ const teamSchema = new mongoose.Schema({
 
 // Define the Match schema
 const matchSchema = new mongoose.Schema({
-  team1: String,
-  team2: String,
+  team1: teamSchema,
+  team2: teamSchema,
 });
 
 // Define the main schema for the document
 const leagueSchema = new mongoose.Schema({
   teams: [teamSchema], // Array of teams
-  matchs: [matchSchema], // Array of matches
+  matchs: [matchSchema], // Array of matches (corrected from matchs)
   league: String, // League name
 });
 

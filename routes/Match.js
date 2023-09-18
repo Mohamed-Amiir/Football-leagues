@@ -20,11 +20,6 @@ router.get("/fetch/:leagueName", async (req, res) => {
 });
 
 router.post("/:leagueName", async (req, res) => {
-  const newMatch = {
-    team1: req.body.team1,
-    team2: req.body.team2,
-  };
-
   try {
     const leagueDocument = await League.findOne({
       league: req.params.leagueName,
@@ -33,7 +28,13 @@ router.post("/:leagueName", async (req, res) => {
     if (!leagueDocument) {
       return res.status(404).send("League document not found");
     }
-
+    const Teams = leagueDocument.teams;
+    const home = Teams.find((obj) => obj.name === req.body.team1);
+    const away = Teams.find((obj) => obj.name === req.body.team2);
+    const newMatch = {
+      team1: home,
+      team2: away,
+    };
     leagueDocument.matchs.push(newMatch);
     await leagueDocument.save();
 
@@ -56,7 +57,7 @@ router.delete("/:leagueName", async (req, res) => {
 
     // Find the index of the match in the "matchs" array
     const matchIndex = leagueDocument.matchs.findIndex(
-      (match) => match.team1 === req.body.team1
+      (match) => match.team1.name === req.body.team1
     );
 
     if (matchIndex === -1) {
