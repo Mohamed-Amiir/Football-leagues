@@ -24,7 +24,8 @@ jobs:
       #   run: npm test
 
       - name: Archive production artifacts
-        run: tar -czf app.tar.gz .
+        run: tar --ignore-failed-read -czf app.tar.gz .
+
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4     # ✅ NEW VERSION
