@@ -2,11 +2,25 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const path = require("path");
-const port = process.env.PORT || 3333;
+require("dotenv").config();
+const port = process.env.PORT;
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+
+
+
+const matchRoutes = require("./routes/matchRoutes");
+const Football = require("./routes/Match");
+const loginRoutes = require("./routes/authentication");
+app.use(bodyParser.json());
+// 3rd party middleware
+app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/dashboard", Football);
+app.use("/login", loginRoutes);
+
 mongoose
-  .connect("mongodb://localhost:27017/football", {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -23,15 +37,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-const matchRoutes = require("./routes/matchRoutes");
-const Football = require("./routes/Match");
-const loginRoutes = require("./routes/authentication");
-app.use(bodyParser.json());
-// 3rd party middleware
-app.use(bodyParser.urlencoded({ extended: true })); // Use bodyParser for parsing form data
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/dashboard", Football);
-app.use("/login", loginRoutes);
 
 function isAuthenticated(req, res, next) {
   if (req.session.isLoggedIn) {
@@ -47,7 +52,7 @@ app.get("/login", (req, res) => {
 });
 
 // Request main
-app.get("/dashboard", isAuthenticated, (req, res) => {
+app.get("/dashboard", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/dashboard/dashboard.html"));
 });
 app.get("/main", (req, res) => {
