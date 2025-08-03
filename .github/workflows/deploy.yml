@@ -2,10 +2,10 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]   # auto deploy only from the main branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,15 +20,33 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Run tests
-      #   run: npm test
-
       - name: Archive production artifacts
         run: tar --ignore-failed-read -czf app.tar.gz .
 
-
       - name: Upload artifact
-        uses: actions/upload-artifact@v4     # ✅ NEW VERSION
+        uses: actions/upload-artifact@v4
         with:
           name: football_app
           path: app.tar.gz
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: football_app
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Deploy to CentOS VM
+        run: |
+          scp -o StrictHostKeyChecking=no app.tar.gz root@192.168.1.111:/root/app.tar.gz
+          ssh -o StrictHostKeyChecking=no root@192.168.1.111 << 'EOF'
+            mkdir -p /root/football_app
+            tar -xzf /root/app.tar.gz -C /root/football_app --strip-components=1
+            cd /root/football_app
+            npm install
+            pm2 start app.js --name football_app || pm2 restart football_app
+          EOF
