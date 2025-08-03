@@ -1,0 +1,34 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]   # change if your branch name is different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      # - name: Run tests               # uncomment when you have tests
+      #   run: npm test
+
+      - name: Archive production artifacts
+        run: |
+          tar -czf app.tar.gz .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: football_app
+          path: app.tar.gz
