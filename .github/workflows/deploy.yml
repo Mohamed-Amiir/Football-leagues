@@ -2,51 +2,35 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]   # auto deploy only from the main branch
+    branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Archive production artifacts
-        run: tar --ignore-failed-read -czf app.tar.gz .
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: football_app
-          path: app.tar.gz
-
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: football_app
-
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+      - name: Run Lint/Test
+        run: echo "✅ You can add test command here"
 
       - name: Deploy to CentOS VM
-        run: |
-          scp -o StrictHostKeyChecking=no app.tar.gz root@192.168.1.111:/root/app.tar.gz
-          ssh -o StrictHostKeyChecking=no root@192.168.1.111 << 'EOF'
-            mkdir -p /root/football_app
-            tar -xzf /root/app.tar.gz -C /root/football_app --strip-components=1
-            cd /root/football_app
-            npm install
-            pm2 start app.js --name football_app || pm2 restart football_app
-          EOF
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ${{ secrets.APP_DIR }}
+            git pull origin main
+            npm install --production
+            pm2 restart football_app || pm2 start app.js --name football_app
